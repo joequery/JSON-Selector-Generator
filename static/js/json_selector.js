@@ -7,7 +7,7 @@ $(function(){
 
     var DomOutlineHandlers = {
         'click': function(e){
-            selector_val = $(e).data('json-selector');
+            selector_val = $(e).attr('data-json-selector');
             $selector_box.val(selector_val);
         },
         'mouseover': function(e){
