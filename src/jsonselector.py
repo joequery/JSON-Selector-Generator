@@ -22,14 +22,14 @@ def codify_json(json_str):
         return TAB_INDENT * n
 
     def apply_attrs(d, sel='', depth=0):
-        print("d: %s" % d)
-        print("sel: %s" % sel)
-
         ################################
         # Handle the terminal cases
         ################################
         if d is None:
             return span('value', span('literal', "null", sel))
+
+        if isinstance(d, bool):
+            return span('value', span('literal', str(d).lower(), sel))
 
         if isinstance(d, basestring):
             return span('value', dquote(span('string', d, sel)))

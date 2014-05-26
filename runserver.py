@@ -27,6 +27,7 @@ def process():
     try:
         codified_json = codify_json(json.dumps(data))
     except ValueError, e:
+        print(str(e))
         return "Error"
 
     return render_template("codify_json.html", codified_json=codified_json)
