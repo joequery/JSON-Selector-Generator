@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JSON Selector Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/highlighter/default.css')}}" rel="stylesheet">
+
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="container-fluid">
+
+        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="control-group">
+              <label class="control-label" for="selector">The selector:</label>
+              <div class="controls">
+                <input id="selector" name="selector" type="text" class="input-xlarge" style="width: 400px;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 50px;">Click on a value to get the JSON selector</p>
+
+        <div class="row span12">
+            {{codified_json|safe}}
+        </div>
+    </div> <!-- /container -->
+
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.dom-outline-1.0.js')}}"></script>
+    <script src="{{url_for('static', filename='js/json_selector.js')}}"></script>
+
+  </body>
+</html>
+
