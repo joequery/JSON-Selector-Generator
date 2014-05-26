@@ -28,6 +28,9 @@ def codify_json(json_str):
         ################################
         # Handle the terminal cases
         ################################
+        if d is None:
+            return span('value', span('literal', "null", sel))
+
         if isinstance(d, basestring):
             return span('value', dquote(span('string', d, sel)))
 
