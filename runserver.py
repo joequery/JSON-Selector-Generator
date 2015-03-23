@@ -11,6 +11,10 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
+@app.route('/privacy', methods=['GET'])
+def privacy():
+    return render_template("privacy.html")
+
 @app.route('/process', methods=['POST'])
 def process():
     required_fields = ('rawjson',)
