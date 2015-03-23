@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Privacy Policy - JSON Selector Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="container-fluid">
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container pull-left">
+              <a class="brand" href="/">JSON Selector Generator</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <h2>Privacy Policy</h2>
+            <h3>What do we do with the JSON provided to the tool?</h3>
+            <p>
+                The JSON pasted into the tool will exist in memory only as long
+                as necessary to generate the resulting HTML. The JSON is not
+                saved.
+            </p>
+            <h3>What information is collected?</h3>
+            <p>
+                This website uses StatCounter for Analytics. StatCounter is used
+                to gather information regarding how many people are visiting the
+                website, as well as what other websites are linking to this
+                website. StatCounter reports the following information:
+                <ul>
+                    <li>User agent</li>
+                    <li>Date/time of visit</li>
+                    <li>Browser</li>
+                    <li>Screen resolution</li>
+                    <li>Operating system</li>
+                    <li>IP address</li>
+                    <li>City/State/Country associated with IP address</li>
+                    <li>ISP name (Time Warner, Comcast, etc)</li>
+                    <li>Page visited</li>
+                    <li>Referral URL</li>
+                </ul>
+            </p>
+            <h3>I don't trust this website, but I'd like to use this tool</h3>
+            <p>
+                The JSON Selector Generator is licensed under the MIT license.
+                This enables you to <a href="https://github.com/joequery/JSON-Selector-Generator">audit
+                    and download the source from github</a> and run this tool yourself wherever you wish.
+            </p>
+        </div>
+
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/jquery.dom-outline-1.0.js')}}"></script>
+    <script src="{{url_for('static', filename='js/home.js')}}"></script>
+
+  </body>
+</html>
+
